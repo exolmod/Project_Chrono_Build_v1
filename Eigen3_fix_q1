@@ -1,0 +1,784 @@
+Microsoft Windows [Version 10.0.19045.5247]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\bi0n3t2ecu1ty>cmake -DEIGEN3_INCLUDE_DIR=C:\Users\bi0n3t2ecu1ty\Documents\Project Chrono BUILD\EigenLibrary\eigen-3.4.0
+CMake Warning:
+  Ignoring extra path from command line:
+
+   "BUILD\EigenLibrary\eigen-3.4.0"
+
+
+CMake Error: The source directory "C:/Users/bi0n3t2ecu1ty/Chrono" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+C:\Users\bi0n3t2ecu1ty> cmake -DEIGEN3_INCLUDE_DIR="C:/Users/bi0n3t2ecu1ty/Documents/Project Chrono BUILD/EigenLibrary/eigen-3.4.0" -S "C:/path/to/project/source" -B "C:/path/to/build/folder"
+CMake Error: The source directory "C:/path/to/project/source" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+C:\Users\bi0n3t2ecu1ty>cd C:\workspace\chrono
+
+C:\workspace\chrono>dir CMakeLists.txt
+ Volume in drive C has no label.
+ Volume Serial Number is 7883-0D27
+
+ Directory of C:\workspace\chrono
+
+01/13/2025  10:03 PM            11,425 CMakeLists.txt
+               1 File(s)         11,425 bytes
+               0 Dir(s)  51,863,666,688 bytes free
+
+C:\workspace\chrono>cmake -DEIGEN3_INCLUDE_DIR="C:/Users/bi0n3t2ecu1ty/Documents/Project Chrono BUILD/EigenLibrary/eigen-3.4.0" -S "C:/workspace/chrono" -B "C:/workspace/chrono_build"
+-- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.19045.
+-- We are on a Windows system
+-- The host processor is AMD64
+-- Building for a Windows system
+-- The target processor is AMD64
+-- Using a multi-config generator (Visual Studio 17 2022)
+-- Data directory copied to: C:/workspace/chrono_build/bin/data/
+-- Binaries will be created in C:/workspace/chrono_build/bin/<CONFIGURATION>/
+-- Visual Studio version:  1942
+-- C++14 compiler support:  TRUE
+-- C++17 compiler support:  TRUE
+-- Searching for Threads...
+--   Thread library:
+--   Using Win32 threads? 1
+--   Using pthreads?
+-- Searching for OpenMP...
+--   OpenMP version:   4.0
+-- Testing SIMD capabilities...
+-- FMA requires enabling whole program optimization. FMA check disabled.
+-- Searching for Eigen3...
+--   Eigen3 version: 3.4.0
+--   Eigen3 include directory: C:/Users/bi0n3t2ecu1ty/Documents/Project Chrono BUILD/EigenLibrary/eigen-3.4.0
+-- Searching for MPI...
+-- Could NOT find MPI_C (missing: MPI_C_LIB_NAMES MPI_C_HEADER_DIR MPI_C_WORKS)
+-- Could NOT find MPI_CXX (missing: MPI_CXX_LIB_NAMES MPI_CXX_HEADER_DIR MPI_CXX_WORKS)
+-- Could NOT find MPI (missing: MPI_C_FOUND MPI_CXX_FOUND)
+-- Searching for CUDA...
+CMake Warning (dev) at src/CMakeLists.txt:344 (find_package):
+  Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake
+  --help-policy CMP0146" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+--   CUDA not found (consider manually setting CUDA_TOOLKIT_ROOT_DIR)
+-- Searching for Thrust...
+--   Thrust not found (consider manually setting THRUST_INCLUDE_DIR)
+-- [MSVC] Warning level set to /W4
+-- Compiler and linker flags:
+--   CMAKE_CXX_FLAGS:         /DWIN32 /D_WINDOWS /GR /EHsc  /DWIN32 /D_WINDOWS /GR /EHsc     /arch:AVX2 /arch:AVX  -DEIGEN_DONT_PARALLELIZE /Zc:__cplusplus /EHsc
+--   CMAKE_CXX_FLAGS_DEBUG:   /Zi /Ob0 /Od /RTC1 /DWIN32 /D_WINDOWS /GR /EHsc     /arch:AVX2 /arch:AVX  -DEIGEN_DONT_PARALLELIZE /Zc:__cplusplus /EHsc -D_DEBUG -DDEBUG
+--   CMAKE_CXX_FLAGS_RELEASE: /O2 /Ob2 /DNDEBUG /DWIN32 /D_WINDOWS /GR /EHsc     /arch:AVX2 /arch:AVX  -DEIGEN_DONT_PARALLELIZE /Zc:__cplusplus /EHsc -DNDEBUG
+--   Linke flags LIB:          /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:msvcrtd.lib /NODEFAULTLIB:libcmt$<$<NOT:$<CONFIG:Debug>>:d>.lib
+--   Linke flags EXE:         /machine:x64 /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:msvcrtd.lib /NODEFAULTLIB:libcmt$<$<NOT:$<CONFIG:Debug>>:d>.lib
+--
+==== Chrono Engine core module ====
+
+-- Chrono includes: C:/workspace/chrono/src/chrono;C:/workspace/chrono/src/chrono/collision/bullet;C:/workspace/chrono/src/chrono/collision/gimpact;C:/workspace/chrono/src/chrono/../chrono_thirdparty/HACD;C:/workspace/chrono/src/chrono/../chrono_thirdparty/HACDv2
+--
+==== Chrono models ====
+
+-- Robot models...
+--
+==== Demo programs ====
+
+-- Demo programs for CORE module...
+-- ...add demo_CH_coords
+-- ...add demo_CH_linalg
+-- ...add demo_CH_matrix_ref
+-- ...add demo_CH_math
+-- ...add demo_CH_archive
+-- ...add demo_CH_buildsystem
+-- ...add demo_CH_powertrain
+-- ...add demo_CH_functions
+-- ...add demo_CH_solver
+-- ...add demo_CH_EulerAngles
+-- ...add demo_CH_filesystem
+-- Demo programs for FEA module...
+-- ...add demo_FEA_basic
+-- ...add demo_FEA_dynamics
+-- ...add demo_FEA_loads_statics
+-- Demo programs for ROBOT models...
+--   Warning: the Industrial projects require Chrono::Irrlicht!
+-- Demo programs for SOCKET COMMUNICATION module...
+-- ...add demo_COSIM_socket
+-- ...add demo_COSIM_data_exchange
+-- ...add demo_COSIM_hydraulics
+-- Configuring done (8.0s)
+-- Generating done (0.4s)
+-- Build files have been written to: C:/workspace/chrono_build
+
+C:\workspace\chrono>cmake -DEIGEN3_INCLUDE_DIR="C:/Users/bi0n3t2ecu1ty/Documents/Project Chrono BUILD/EigenLibrary/eigen-3.4.0" -S "C:/workspace/chrono" -B "C:/workspace/chrono_build"
+-- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.19045.
+-- We are on a Windows system
+-- The host processor is AMD64
+-- Building for a Windows system
+-- The target processor is AMD64
+-- Using a multi-config generator (Visual Studio 17 2022)
+-- Data directory copied to: C:/workspace/chrono_build/bin/data/
+-- Binaries will be created in C:/workspace/chrono_build/bin/<CONFIGURATION>/
+-- Visual Studio version:  1942
+-- C++14 compiler support:  TRUE
+-- C++17 compiler support:  TRUE
+-- Searching for Threads...
+--   Thread library:
+--   Using Win32 threads? 1
+--   Using pthreads?
+-- Searching for OpenMP...
+--   OpenMP version:   4.0
+-- Testing SIMD capabilities...
+-- FMA requires enabling whole program optimization. FMA check disabled.
+-- Searching for Eigen3...
+--   Eigen3 version: 3.4.0
+--   Eigen3 include directory: C:/Users/bi0n3t2ecu1ty/Documents/Project Chrono BUILD/EigenLibrary/eigen-3.4.0
+-- Searching for MPI...
+-- Could NOT find MPI_C (missing: MPI_C_LIB_NAMES MPI_C_HEADER_DIR MPI_C_WORKS)
+-- Could NOT find MPI_CXX (missing: MPI_CXX_LIB_NAMES MPI_CXX_HEADER_DIR MPI_CXX_WORKS)
+-- Could NOT find MPI (missing: MPI_C_FOUND MPI_CXX_FOUND)
+-- Searching for CUDA...
+CMake Warning (dev) at src/CMakeLists.txt:344 (find_package):
+  Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake
+  --help-policy CMP0146" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+--   CUDA not found (consider manually setting CUDA_TOOLKIT_ROOT_DIR)
+-- Searching for Thrust...
+--   Thrust not found (consider manually setting THRUST_INCLUDE_DIR)
+-- [MSVC] Warning level set to /W4
+-- Compiler and linker flags:
+--   CMAKE_CXX_FLAGS:         /DWIN32 /D_WINDOWS /GR /EHsc  /DWIN32 /D_WINDOWS /GR /EHsc     /arch:AVX2 /arch:AVX  -DEIGEN_DONT_PARALLELIZE /Zc:__cplusplus /EHsc
+--   CMAKE_CXX_FLAGS_DEBUG:   /Zi /Ob0 /Od /RTC1 /DWIN32 /D_WINDOWS /GR /EHsc     /arch:AVX2 /arch:AVX  -DEIGEN_DONT_PARALLELIZE /Zc:__cplusplus /EHsc -D_DEBUG -DDEBUG
+--   CMAKE_CXX_FLAGS_RELEASE: /O2 /Ob2 /DNDEBUG /DWIN32 /D_WINDOWS /GR /EHsc     /arch:AVX2 /arch:AVX  -DEIGEN_DONT_PARALLELIZE /Zc:__cplusplus /EHsc -DNDEBUG
+--   Linke flags LIB:          /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:msvcrtd.lib /NODEFAULTLIB:libcmt$<$<NOT:$<CONFIG:Debug>>:d>.lib
+--   Linke flags EXE:         /machine:x64 /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:msvcrtd.lib /NODEFAULTLIB:libcmt$<$<NOT:$<CONFIG:Debug>>:d>.lib
+--
+==== Chrono Engine core module ====
+
+-- Chrono includes: C:/workspace/chrono/src/chrono;C:/workspace/chrono/src/chrono/collision/bullet;C:/workspace/chrono/src/chrono/collision/gimpact;C:/workspace/chrono/src/chrono/../chrono_thirdparty/HACD;C:/workspace/chrono/src/chrono/../chrono_thirdparty/HACDv2
+--
+==== Chrono models ====
+
+-- Robot models...
+--
+==== Demo programs ====
+
+-- Demo programs for CORE module...
+-- ...add demo_CH_coords
+-- ...add demo_CH_linalg
+-- ...add demo_CH_matrix_ref
+-- ...add demo_CH_math
+-- ...add demo_CH_archive
+-- ...add demo_CH_buildsystem
+-- ...add demo_CH_powertrain
+-- ...add demo_CH_functions
+-- ...add demo_CH_solver
+-- ...add demo_CH_EulerAngles
+-- ...add demo_CH_filesystem
+-- Demo programs for FEA module...
+-- ...add demo_FEA_basic
+-- ...add demo_FEA_dynamics
+-- ...add demo_FEA_loads_statics
+-- Demo programs for ROBOT models...
+--   Warning: the Industrial projects require Chrono::Irrlicht!
+-- Demo programs for SOCKET COMMUNICATION module...
+-- ...add demo_COSIM_socket
+-- ...add demo_COSIM_data_exchange
+-- ...add demo_COSIM_hydraulics
+-- Configuring done (7.5s)
+-- Generating done (2.4s)
+-- Build files have been written to: C:/workspace/chrono_build
+
+C:\workspace\chrono>cmake --build "C:/workspace/chrono_build"
+MSBuild version 17.12.12+1cce77968 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/workspace/chrono/src/chrono/CMakeLists.txt
+  ChClassFactory.cpp
+  ChQuaternion.cpp
+  ChRotation.cpp
+  ChVector3.cpp
+  ChCoordsys.cpp
+  ChQuadrature.cpp
+  ChBezierCurve.cpp
+  ChCubicSpline.cpp
+  ChRandom.cpp
+  ChGlobal.cpp
+  ChArchive.cpp
+  ChArchiveBinary.cpp
+  ChObjectExplorer.cpp
+  ChArchiveJSON.cpp
+  ChArchiveXML.cpp
+  ChOutputASCII.cpp
+  ChObject.cpp
+  ChMarker.cpp
+  ChForce.cpp
+  ChBodyFrame.cpp
+  ChBody.cpp
+  ChBodyAuxRef.cpp
+  ChBodyEasy.cpp
+  ChSystem.cpp
+  ChSystemNSC.cpp
+  ChSystemSMC.cpp
+  ChPhysicsItem.cpp
+  ChParticleCloud.cpp
+  ChIndexedParticles.cpp
+  ChIndexedNodes.cpp
+  ChNodeBase.cpp
+  ChNodeXYZ.cpp
+  ChProximityContainer.cpp
+  ChConveyor.cpp
+  ChFeeder.cpp
+  ChExternalDynamicsODE.cpp
+  ChExternalDynamicsDAE.cpp
+  ChAssembly.cpp
+  ChContactContainer.cpp
+  ChContactContainerNSC.cpp
+  ChContactContainerSMC.cpp
+  ChContactable.cpp
+  ChContactMaterial.cpp
+  ChContactMaterialSMC.cpp
+  ChContactMaterialNSC.cpp
+  ChLinkLimit.cpp
+  ChLinkForce.cpp
+  ChLinkMask.cpp
+  ChLinkBase.cpp
+  ChLink.cpp
+  ChLinkDistance.cpp
+  ChLinkMarkers.cpp
+  ChLinkBushing.cpp
+  ChLinkLock.cpp
+  ChLinkLockBrake.cpp
+  ChLinkLockGear.cpp
+  ChLinkLockPulley.cpp
+  ChLinkLockLinActuator.cpp
+  ChLinkLockScrew.cpp
+  ChLinkLockClearance.cpp
+  ChLinkLockPointSpline.cpp
+  ChLinkLockTrajectory.cpp
+  ChLinkMate.cpp
+  ChLinkRevolute.cpp
+  ChLinkRevoluteSpherical.cpp
+  ChLinkRevoluteTranslational.cpp
+  ChLinkUniversal.cpp
+  ChLinkRSDA.cpp
+  ChLinkTSDA.cpp
+  ChLinkMotor.cpp
+  ChLinkMotorRotation.cpp
+  ChLinkMotorRotationAngle.cpp
+  ChLinkMotorRotationSpeed.cpp
+  ChLinkMotorRotationTorque.cpp
+  ChLinkMotorRotationDriveline.cpp
+  ChLinkMotorLinear.cpp
+  ChLinkMotorLinearPosition.cpp
+  ChLinkMotorLinearSpeed.cpp
+  ChLinkMotorLinearForce.cpp
+  ChLinkMotorLinearDriveline.cpp
+  ChLinkMotionImposed.cpp
+  ChLoaderU.cpp
+  ChLoaderUV.cpp
+  ChLoaderUVW.cpp
+  ChLoad.cpp
+  ChLoadsBody.cpp
+  ChLoadsNodeXYZ.cpp
+  ChLoadBodyMesh.cpp
+  ChLoadContainer.cpp
+  ChHydraulicCircuit.cpp
+  ChHydraulicActuator.cpp
+  ChShaft.cpp
+  ChShaftBodyConstraint.cpp
+  ChShaftsGear.cpp
+  ChShaftsGearbox.cpp
+  ChShaftsGearboxAngled.cpp
+  ChShaftsClutch.cpp
+  ChShaftsPlanetary.cpp
+  ChShaftsMotor.cpp
+  ChShaftsMotorPosition.cpp
+  ChShaftsMotorSpeed.cpp
+  ChShaftsMotorLoad.cpp
+  ChShaftsTorque.cpp
+  ChShaftsAppliedTorque.cpp
+  ChShaftsTorsionSpring.cpp
+  ChShaftsTorqueConverter.cpp
+  ChShaftsThermalEngine.cpp
+  ChShaftsLoads.cpp
+  ChShaftsFreewheel.cpp
+  ChBuilderBeam.cpp
+  ChGaussIntegrationRule.cpp
+  ChGaussPoint.cpp
+  ChMesh.cpp
+  ChMeshFileLoader.cpp
+  ChMeshExporter.cpp
+  ChPolarDecomposition.cpp
+  ChMatrixCorotation.cpp
+  ChContactSurface.cpp
+  ChContactSurfaceSegmentSet.cpp
+  ChContactSurfaceNodeCloud.cpp
+  ChContactSurfaceMesh.cpp
+  ChMeshSurface.cpp
+  ChLoadContactSurfaceMesh.cpp
+  ChLoadsNodeXYZRot.cpp
+  ChNodeFEAxyz.cpp
+  ChNodeFEAxyzrot.cpp
+  ChNodeFEAxyzP.cpp
+  ChNodeFEAxyzD.cpp
+  ChNodeFEAxyzDD.cpp
+  ChNodeFEAxyzDDD.cpp
+  ChNodeFEAcurv.cpp
+  ChElementBeamEuler.cpp
+C:\workspace\chrono\src\chrono\fea\ChMesh.cpp(291,9): warning C4189: 'nthreads': local variable is initialized but not referenced [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+C:\workspace\chrono\src\chrono\fea\ChMesh.cpp(478,9): warning C4189: 'nthreads': local variable is initialized but not referenced [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+  ChElementBeamTaperedTimoshenko.cpp
+  ChElementBeamTaperedTimoshenkoFPM.cpp
+  ChElementBeamIGA.cpp
+  ChElementCableANCF.cpp
+  ChElementGeneric.cpp
+  ChElementSpring.cpp
+  ChElementBar.cpp
+  ChElementTetraCorot_4.cpp
+  ChElementTetraCorot_10.cpp
+  ChElementHexaCorot_8.cpp
+  ChElementHexaCorot_20.cpp
+  ChElementHexaANCF_3813.cpp
+  ChElementHexaANCF_3813_9.cpp
+  ChElementHexaANCF_3843.cpp
+  ChElementBeamANCF_3243.cpp
+  ChElementBeamANCF_3333.cpp
+  ChElementShellANCF_3423.cpp
+  ChElementShellANCF_3833.cpp
+  ChElementShellANCF_3443.cpp
+  ChElementShellBST.cpp
+  ChElementShellReissner4.cpp
+  ChLinkNodeFrame.cpp
+  ChLinkNodeSlopeFrame.cpp
+  ChLinkNodeNode.cpp
+  ChLinkNodeFace.cpp
+  ChLinkBeamIGAFrame.cpp
+  ChContinuumMaterial.cpp
+  ChMaterialBeamANCF.cpp
+  ChMaterialShellANCF.cpp
+  ChMaterialHexaANCF.cpp
+  ChMaterialShellReissner.cpp
+  ChMaterialShellKirchhoff.cpp
+  ChBeamSection.cpp
+  ChBeamSectionShape.cpp
+  ChBeamSectionCosserat.cpp
+  ChBeamSectionEuler.cpp
+  ChBeamSectionTaperedTimoshenko.cpp
+  ChBeamSectionTaperedTimoshenkoFPM.cpp
+  ChBeamSectionCable.cpp
+  ChSystemDescriptor.cpp
+  ChSolver.cpp
+  ChDirectSolverLS.cpp
+  ChDirectSolverLScomplex.cpp
+  ChIterativeSolver.cpp
+  ChIterativeSolverLS.cpp
+  ChIterativeSolverVI.cpp
+  ChSolverPSOR.cpp
+  ChSolverPJacobi.cpp
+  ChSolverPSSOR.cpp
+  ChSolverPMINRES.cpp
+  ChSolverBB.cpp
+  ChSolverAPGD.cpp
+  ChSolverADMM.cpp
+  ChKRMBlock.cpp
+  ChNlsolver.cpp
+  ChConstraint.cpp
+  ChConstraintTwo.cpp
+  ChConstraintTwoGeneric.cpp
+  ChConstraintTwoGenericBoxed.cpp
+  ChConstraintTwoBodies.cpp
+  ChConstraintThree.cpp
+  ChConstraintThreeGeneric.cpp
+  ChConstraintThreeBBShaft.cpp
+  ChConstraintNgeneric.cpp
+  ChVariables.cpp
+  ChVariablesGeneric.cpp
+  ChVariablesGenericDiagonalMass.cpp
+  ChVariablesBody.cpp
+  ChVariablesBodySharedMass.cpp
+  ChVariablesBodyOwnMass.cpp
+  ChVariablesShaft.cpp
+  ChVariablesNode.cpp
+  ChCollisionInfo.cpp
+  ChCollisionModel.cpp
+  ChCollisionSystem.cpp
+  ChConvexDecomposition.cpp
+  ChCollisionShape.cpp
+  ChCollisionShapeArc2D.cpp
+  ChCollisionShapeBarrel.cpp
+  ChCollisionShapeBox.cpp
+  ChCollisionShapeCapsule.cpp
+  ChCollisionShapeCone.cpp
+  ChCollisionShapeConvexHull.cpp
+  ChCollisionShapeCylinder.cpp
+  ChCollisionShapeCylindricalShell.cpp
+  ChCollisionShapeEllipsoid.cpp
+  ChCollisionShapePath2D.cpp
+  ChCollisionShapePoint.cpp
+  ChCollisionShapeRoundedBox.cpp
+  ChCollisionShapeRoundedCylinder.cpp
+  ChCollisionShapeSegment2D.cpp
+  ChCollisionShapeSegment.cpp
+  ChCollisionShapeSphere.cpp
+  ChCollisionShapeTriangle.cpp
+  ChCollisionShapeMeshTriangle.cpp
+  ChCollisionShapeTriangleMesh.cpp
+  ChGeometry.cpp
+  ChSphere.cpp
+  ChEllipsoid.cpp
+  ChBox.cpp
+  ChCone.cpp
+  ChCylinder.cpp
+  ChCapsule.cpp
+  ChLine.cpp
+  ChLineArc.cpp
+  ChLineSegment.cpp
+  ChLinePath.cpp
+  ChLineBezier.cpp
+  ChLineNurbs.cpp
+  ChLineBSpline.cpp
+  ChLineCam.cpp
+  ChLinePoly.cpp
+  ChTriangle.cpp
+  ChTriangleMesh.cpp
+  ChTriangleMeshSoup.cpp
+  ChTriangleMeshConnected.cpp
+  ChRoundedBox.cpp
+  ChRoundedCylinder.cpp
+  ChSurface.cpp
+  ChSurfaceNurbs.cpp
+  ChVolume.cpp
+  ChProperty.cpp
+  ChTexture.cpp
+  ChCamera.cpp
+  ChColor.cpp
+  ChGlyphs.cpp
+  ChVisualSystem.cpp
+  ChVisualModel.cpp
+  ChVisualMaterial.cpp
+  ChVisualShape.cpp
+  ChVisualShapeModelFile.cpp
+  ChVisualShapeTriangleMesh.cpp
+  ChVisualShapeSphere.cpp
+  ChVisualShapeEllipsoid.cpp
+  ChVisualShapeBox.cpp
+  ChVisualShapeBarrel.cpp
+  ChVisualShapeCone.cpp
+  ChVisualShapeCylinder.cpp
+  ChVisualShapeCapsule.cpp
+  ChVisualShapeRoundedCylinder.cpp
+  ChVisualShapeRoundedBox.cpp
+  ChVisualShapePath.cpp
+  ChVisualShapeLine.cpp
+  ChVisualShapePointPoint.cpp
+  ChVisualShapeSurface.cpp
+  ChVisualShapeFEA.cpp
+  ChIntegrable.cpp
+  ChTimestepper.cpp
+  ChTimestepperHHT.cpp
+  ChStaticAnalysis.cpp
+  ChAssemblyAnalysis.cpp
+  ChFunctionBSpline.cpp
+  ChFunctionCycloidal.cpp
+  ChFunctionBase.cpp
+  ChFunctionConst.cpp
+  ChFunctionConstAcc.cpp
+  ChFunctionConstJerk.cpp
+  ChFunctionDerivative.cpp
+  ChFunctionFillet3.cpp
+  ChFunctionIntegral.cpp
+  ChFunctionInterp.cpp
+  ChFunctionMirror.cpp
+  ChFunctionOperator.cpp
+  ChFunctionPoly.cpp
+  ChFunctionPoly23.cpp
+  ChFunctionPoly345.cpp
+  ChFunctionPosition.cpp
+  ChFunctionPositionLine.cpp
+  ChFunctionPositionSetpoint.cpp
+  ChFunctionPositionXYZFunctions.cpp
+  ChFunctionRamp.cpp
+  ChFunctionRepeat.cpp
+  ChFunctionRotation.cpp
+  ChFunctionRotationABCFunctions.cpp
+  ChFunctionRotationAxis.cpp
+  ChFunctionRotationBSpline.cpp
+  ChFunctionRotationSetpoint.cpp
+  ChFunctionRotationSQUAD.cpp
+  ChFunctionSequence.cpp
+  ChFunctionSetpoint.cpp
+  ChFunctionSine.cpp
+  ChFunctionSineStep.cpp
+  ChUtilsGeometry.cpp
+  ChUtilsCreators.cpp
+  ChUtilsGenerators.cpp
+  ChUtilsInputOutput.cpp
+  ChUtilsChaseCamera.cpp
+  ChUtilsValidation.cpp
+  ChProfiler.cpp
+  ChControllers.cpp
+  ChFilters.cpp
+  ChCompositeInertia.cpp
+  ChConvexHull.cpp
+  ChBodyGeometry.cpp
+  ChSocket.cpp
+  ChSocketCommunication.cpp
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+  hacdRaycastMesh.cpp
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+  hacdMicroAllocator.cpp
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+  hacdGraph.cpp
+  hacdMeshDecimator.cpp
+  hacdHACD.cpp
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+  hacdManifoldMesh.cpp
+  hacdICHull.cpp
+  AutoGeometry.cpp
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+  HACD.cpp
+  ConvexHull.cpp
+  WuQuantizer.cpp
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+  dgTypes.cpp
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+cl : command line  warning D9025: overriding '/W4' with '/w' [C:\workspace\chrono_build\src\chrono\ChronoEngine.vcxproj]
+  dgConvexHull3d.cpp
+  dgTree.cpp
+  dgGoogol.cpp
+  dgSphere.cpp
+  dgSmallDeterminant.cpp
+  dgQuaternion.cpp
+  dgMatrix.cpp
+  dgPolyhedra.cpp
+  dgMeshEffect.cpp
+  MergeHulls.cpp
+  wavefront.cpp
+  ChCollisionSystemBullet.cpp
+  ChCollisionModelBullet.cpp
+  ChCollisionAlgorithmsBullet.cpp
+  ChCollisionUtilsBullet.cpp
+  cbtAxisSweep3.cpp
+  cbtSimpleBroadphase.cpp
+  cbtOverlappingPairCache.cpp
+  cbtBroadphaseProxy.cpp
+  cbtDispatcher.cpp
+  cbtCollisionAlgorithm.cpp
+  cbtDbvt.cpp
+  cbtDbvtBroadphase.cpp
+  cbtQuantizedBvh.cpp
+  cbtUnionFind.cpp
+  cbtCollisionDispatcher.cpp
+  cbtCollisionDispatcherMt.cpp
+  cbtSphereSphereCollisionAlgorithm.cpp
+  cbtCollisionObject.cpp
+  cbtSphereBoxCollisionAlgorithm.cpp
+  cbtCollisionWorld.cpp
+  cbtCollisionWorldImporter.cpp
+  cbtSimulationIslandManager.cpp
+  cbtCompoundCollisionAlgorithm.cpp
+  cbtCompoundCompoundCollisionAlgorithm.cpp
+  cbtManifoldResult.cpp
+  cbtConvexConcaveCollisionAlgorithm.cpp
+  cbtEmptyCollisionAlgorithm.cpp
+  cbtSphereTriangleCollisionAlgorithm.cpp
+  cbtConvexConvexAlgorithm.cpp
+  SphereTriangleDetector.cpp
+  cbtDefaultCollisionConfiguration.cpp
+  cbtConvexPlaneCollisionAlgorithm.cpp
+  cbtActivatingCollisionAlgorithm.cpp
+  cbtBox2dBox2dCollisionAlgorithm.cpp
+  cbtBoxBoxCollisionAlgorithm.cpp
+  cbtBoxBoxDetector.cpp
+  cbtGhostObject.cpp
+  cbtConvex2dConvex2dAlgorithm.cpp
+  cbtInternalEdgeUtility.cpp
+  cbtHashedSimplePairCache.cpp
+  cbtBarrelShape.cpp
+  cbt2DShape.cpp
+  cbtCEtriangleShape.cpp
+  cbtSegmentShape.cpp
+  cbtBoxShape.cpp
+  cbtTriangleMeshShape.cpp
+  cbtBvhTriangleMeshShape.cpp
+  cbtTriangleMesh.cpp
+  cbtTriangleIndexVertexArray.cpp
+  cbtCollisionShape.cpp
+  cbtTriangleCallback.cpp
+  cbtCompoundShape.cpp
+  cbtTetrahedronShape.cpp
+  cbtConcaveShape.cpp
+  cbtStridingMeshInterface.cpp
+  cbtConeShape.cpp
+  cbtStaticPlaneShape.cpp
+  cbtConvexHullShape.cpp
+  cbtSphereShape.cpp
+  cbtConvexShape.cpp
+  cbtPolyhedralConvexShape.cpp
+  cbtConvexTriangleMeshShape.cpp
+  cbtOptimizedBvh.cpp
+  cbtCylinderShape.cpp
+  cbtCylindricalShellShape.cpp
+  cbtMultiSphereShape.cpp
+  cbtEmptyShape.cpp
+  cbtMinkowskiSumShape.cpp
+  cbtTriangleBuffer.cpp
+  cbtHeightfieldTerrainShape.cpp
+  cbtCapsuleShape.cpp
+  cbtConvexInternalShape.cpp
+  cbtUniformScalingShape.cpp
+  cbtBox2dShape.cpp
+  cbtConvex2dShape.cpp
+  cbtConvexPointCloudShape.cpp
+  cbtMultimaterialTriangleMeshShape.cpp
+  cbtScaledBvhTriangleMeshShape.cpp
+  cbtShapeHull.cpp
+  cbtTriangleIndexVertexMaterialArray.cpp
+  cbtSdfCollisionShape.cpp
+  cbtMiniSDF.cpp
+  cbtConvexPolyhedron.cpp
+  cbtContinuousConvexCollision.cpp
+  cbtSubSimplexConvexCast.cpp
+  cbtConvexCast.cpp
+  cbtRaycastCallback.cpp
+  cbtPersistentManifold.cpp
+  cbtMinkowskiPenetrationDepthSolver.cpp
+  cbtGjkConvexCast.cpp
+  cbtGjkEpaPenetrationDepthSolver.cpp
+  cbtVoronoiSimplexSolver.cpp
+  cbtGjkPairDetector.cpp
+  cbtGjkEpa2.cpp
+  cbtPolyhedralContactClipping.cpp
+  cbtQuickprof.cpp
+  cbtAlignedAllocator.cpp
+  cbtGeometryUtil.cpp
+  cbtConvexHull.cpp
+  cbtConvexHullComputer.cpp
+  cbtSerializer.cpp
+  cbtSerializer64.cpp
+  cbtPolarDecomposition.cpp
+  cbtThreads.cpp
+  cbtVector3.cpp
+  cbtTaskScheduler.cpp
+  cbtThreadSupportPosix.cpp
+  cbtThreadSupportWin32.cpp
+  gim_box_set.cpp
+  gim_contact.cpp
+  gim_memory.cpp
+  gim_tri_collision.cpp
+  cbtContactProcessing.cpp
+  cbtGenericPoolAllocator.cpp
+  cbtGImpactBvh.cpp
+  cbtGImpactCollisionAlgorithm.cpp
+  cbtGImpactQuantizedBvh.cpp
+  cbtGImpactShape.cpp
+  cbtTriangleShapeEx.cpp
+  bestfit.cpp
+  bestfitobb.cpp
+  cd_hull.cpp
+  concavity.cpp
+  ConvexBuilder.cpp
+  ConvexDecomposition.cpp
+  fitsphere.cpp
+  float_math.cpp
+  meshvolume.cpp
+  planetri.cpp
+  raytri.cpp
+  splitplane.cpp
+  vlookup.cpp
+  tiny_obj_loader.cc
+  stlfile.c
+     Creating library C:/workspace/chrono_build/lib/Debug/ChronoEngine.lib and object C:/workspace/chrono_build/lib/Debug/ChronoEngine.exp
+  ChronoEngine.vcxproj -> C:\workspace\chrono_build\bin\Debug\ChronoEngine.dll
+  Building Custom Rule C:/workspace/chrono/src/chrono_models/robot/CMakeLists.txt
+  RoboSimian.cpp
+  Curiosity.cpp
+  Viper.cpp
+  Turtlebot.cpp
+  Little_Hexy.cpp
+  IndustrialRobot.cpp
+  IndustrialRobotSCARA.cpp
+  IndustrialRobotSCARA_CAD.cpp
+  IndustrialRobot6dof.cpp
+  IndustrialRobot6dofCAD.cpp
+  IndustrialKinematics.cpp
+  IndustrialKinematicsSCARA.cpp
+  IndustrialKinematics6dofSpherical.cpp
+  IndustrialKinematicsNdofNumerical.cpp
+  TrajectoryInterpolator.cpp
+     Creating library C:/workspace/chrono_build/lib/Debug/ChronoModels_robot.lib and object C:/workspace/chrono_build/lib/Debug/ChronoModels_robot.exp
+  ChronoModels_robot.vcxproj -> C:\workspace\chrono_build\bin\Debug\ChronoModels_robot.dll
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_EulerAngles.cpp
+  demo_CH_EulerAngles.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_EulerAngles.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_archive.cpp
+  demo_CH_archive.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_archive.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_buildsystem.cpp
+  demo_CH_buildsystem.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_buildsystem.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_coords.cpp
+  demo_CH_coords.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_coords.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_filesystem.cpp
+  demo_CH_filesystem.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_filesystem.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_functions.cpp
+  demo_CH_functions.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_functions.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_linalg.cpp
+  demo_CH_linalg.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_linalg.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_math.cpp
+  demo_CH_math.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_math.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_matrix_ref.cpp
+  demo_CH_matrix_ref.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_matrix_ref.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_powertrain.cpp
+  demo_CH_powertrain.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_powertrain.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/core/CMakeLists.txt
+  demo_CH_solver.cpp
+  demo_CH_solver.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_CH_solver.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/cosimulation/CMakeLists.txt
+  demo_COSIM_data_exchange.cpp
+  demo_COSIM_data_exchange.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_COSIM_data_exchange.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/cosimulation/CMakeLists.txt
+  demo_COSIM_hydraulics.cpp
+  demo_COSIM_hydraulics.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_COSIM_hydraulics.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/cosimulation/CMakeLists.txt
+  demo_COSIM_socket.cpp
+  demo_COSIM_socket.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_COSIM_socket.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/fea/CMakeLists.txt
+  demo_FEA_basic.cpp
+  demo_FEA_basic.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_FEA_basic.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/fea/CMakeLists.txt
+  demo_FEA_dynamics.cpp
+  demo_FEA_dynamics.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_FEA_dynamics.exe
+  Building Custom Rule C:/workspace/chrono/src/demos/fea/CMakeLists.txt
+  demo_FEA_loads_statics.cpp
+  demo_FEA_loads_statics.vcxproj -> C:\workspace\chrono_build\bin\Debug\demo_FEA_loads_statics.exe
+  Building Custom Rule C:/workspace/chrono/CMakeLists.txt
+
+C:\workspace\chrono>
